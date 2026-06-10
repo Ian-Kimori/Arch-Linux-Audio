@@ -34,7 +34,9 @@ lspci | grep -i audio
 lsmod | grep snd
 ```
 `lspci` shows what audio hardware you have.
+
 `lsmod` shows which kernel modules (drivers) are loaded.
+
 Look for `snd_sof_*` modules — these are SOF (Sound Open Firmware) drivers that require separate firmware blobs to function.
 
 ---
@@ -72,7 +74,9 @@ pactl list sinks short
 wpctl status
 ```
 `/proc/asound/cards` should now list your card.
+
 `pactl` should show a real `alsa_output.*` sink.
+
 `wpctl status` should show your device under Audio → Devices and Sinks.
 
 ---
